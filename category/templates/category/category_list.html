@@ -1,0 +1,11 @@
+<h1>Categories CBV</h1>
+<ul>
+    {% for category in object_list %}
+    <li>{{ category.name }}
+    <a href="{% url 'category:category_edit' category.id %}">edit</a>
+    <a href="{% url 'category:category_delete' category.id %}">delete</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'category:category_new' %}">New</a>
